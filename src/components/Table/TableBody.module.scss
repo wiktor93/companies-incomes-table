@@ -1,0 +1,18 @@
+tbody {
+
+  tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:nth-last-of-type(1) {
+      border: none;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+}
+
+.fillers {
+  height: 49px;
+}

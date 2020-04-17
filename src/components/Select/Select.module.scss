@@ -1,13 +1,13 @@
 @import '../../styles/mixins.scss';
 
-.input {
+.select {
   @include shadows-and-border;
-  width: max-content;
-  max-width: 100%;
-  height: calc(max-content + 2px);
   padding: 6px 10px;
-  font-family: inherit;
   font-size: inherit;
-  align-self: flex-end;
+  font-family: inherit;
   border-radius: 3px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

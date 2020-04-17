@@ -1,7 +1,9 @@
 .thead {
   font-weight: 600;
 
-  td:not(:first-of-type) {
+  td {
+    transition: 0.3s;
+
     &:hover {
       cursor: pointer;
       color: rgba(0, 0, 0, 0.5);

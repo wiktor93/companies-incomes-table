@@ -11,9 +11,12 @@ body {
 }
 
 .App {
-  margin: 50px auto;
-  width: max-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .wraper {
+    margin: 50px auto;
+    width: 90vw;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -1,0 +1,22 @@
+.wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .wraper {
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 25px;
+    }
+  }
+}
