@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './TableBody.module.scss';
 import tableColumns from '../../assets/tableColumns';
+import accountingFormat from '../../utils/accountingFormat';
 
-const TableBody = ({companiesPerPage, searchedItem, itemsPerPage}) => {
+const TableBody = ({companiesPerPage, searchedItem, itemsPerPage, error}) => {
   return (
     <tbody className={styles.tbody}>
       {companiesPerPage &&
@@ -17,7 +18,7 @@ const TableBody = ({companiesPerPage, searchedItem, itemsPerPage}) => {
                   .includes(searchedItem.toLowerCase())
               ) {
                 isElementPresent = true;
-                break; //if element is present in a row, check next one
+                break; //if element is present in a row , check next one
               }
             }
             return isElementPresent;
@@ -27,28 +28,11 @@ const TableBody = ({companiesPerPage, searchedItem, itemsPerPage}) => {
               <td>{el.id}</td>
               <td>{el.name}</td>
               <td>{el.city}</td>
-              <td>
-                {el.totalIncome
-                  ? new Intl.NumberFormat('en-US').format(el.totalIncome)
-                  : null}
-              </td>
-              <td>
-                {el.avgIncome
-                  ? new Intl.NumberFormat('en-US', {
-                      minimumFractionDigits: 2,
-                    }).format(el.avgIncome)
-                  : null}
-              </td>
-              <td>
-                {el.lastMonthIncome
-                  ? new Intl.NumberFormat('en-US', {
-                      minimumFractionDigits: 2,
-                    }).format(el.lastMonthIncome)
-                  : null}
-              </td>
+              <td>{accountingFormat(el.totalIncome)}</td>
+              <td>{accountingFormat(el.avgIncome)}</td>
+              <td>{accountingFormat(el.lastMonthIncome)}</td>
             </tr>
           ))}
-      {console.log(itemsPerPage, companiesPerPage.length)}
       {itemsPerPage > companiesPerPage.length &&
         new Array(itemsPerPage - companiesPerPage.length)
           .fill(1)

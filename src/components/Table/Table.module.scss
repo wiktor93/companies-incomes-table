@@ -2,22 +2,24 @@
 
 .wraper {
   @include shadows-and-border;
+  position: relative;
+
   width: 100%;
   overflow-x: auto;
   margin: 25px 0;
   border-radius: 3px;
-}
 
-.table {
-  width: 100%;
-  min-width: 640px;
-  position: relative;
-  border-collapse: collapse;
-  text-align: right;
-  border-radius: 3px;
+  table {
+    width: 100%;
+    min-width: 640px;
+    position: relative;
+    border-collapse: collapse;
+    text-align: right;
+    border-radius: 3px;
 
-  tr,
-  td {
-    padding: 15px 10px;
+    tr,
+    td {
+      padding: 15px 10px;
+    }
   }
 }
