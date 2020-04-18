@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/companies-incomes-table/static/css/main.ad83d409.chunk.css",
+    "main.js": "/companies-incomes-table/static/js/main.6f6fc9f4.chunk.js",
+    "main.js.map": "/companies-incomes-table/static/js/main.6f6fc9f4.chunk.js.map",
+    "runtime-main.js": "/companies-incomes-table/static/js/runtime-main.33a019ca.js",
+    "runtime-main.js.map": "/companies-incomes-table/static/js/runtime-main.33a019ca.js.map",
+    "static/js/2.cf381f6b.chunk.js": "/companies-incomes-table/static/js/2.cf381f6b.chunk.js",
+    "static/js/2.cf381f6b.chunk.js.map": "/companies-incomes-table/static/js/2.cf381f6b.chunk.js.map",
+    "index.html": "/companies-incomes-table/index.html",
+    "precache-manifest.584d59d74397dc2d2356939f6365869b.js": "/companies-incomes-table/precache-manifest.584d59d74397dc2d2356939f6365869b.js",
+    "service-worker.js": "/companies-incomes-table/service-worker.js",
+    "static/css/main.ad83d409.chunk.css.map": "/companies-incomes-table/static/css/main.ad83d409.chunk.css.map",
+    "static/js/2.cf381f6b.chunk.js.LICENSE.txt": "/companies-incomes-table/static/js/2.cf381f6b.chunk.js.LICENSE.txt",
+    "static/media/left-arrow.svg": "/companies-incomes-table/static/media/left-arrow.6c9efe0c.svg",
+    "static/media/right-arrow.svg": "/companies-incomes-table/static/media/right-arrow.be237328.svg",
+    "static/media/sort-down.svg": "/companies-incomes-table/static/media/sort-down.ca82bc74.svg",
+    "static/media/sort-up.svg": "/companies-incomes-table/static/media/sort-up.3a5f2344.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33a019ca.js",
+    "static/js/2.cf381f6b.chunk.js",
+    "static/css/main.ad83d409.chunk.css",
+    "static/js/main.6f6fc9f4.chunk.js"
+  ]
+}
