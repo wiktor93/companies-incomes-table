@@ -5,6 +5,7 @@ import Table from './Table/Table';
 import Pagination from './Pagination/Pagination';
 import LoadingModal from './LoadingModal/LoadingModal';
 import handleIncomes from '../utils/handleIncomes';
+import progressUpdate from '../utils/progressUpdate';
 
 function App() {
   const [allCompanies, setAllCompanies] = useState([]);
@@ -27,10 +28,8 @@ function App() {
           return response.json();
         })
         .then((data) => {
-          fetchedCompanies.push(
-            ...data.sort((a, b) => a.id - b.id).slice(0, 300)
-          );
-          setAllCompanies(fetchedCompanies);
+          fetchedCompanies.push(...data.sort((a, b) => a.id - b.id));
+          setAllCompanies(fetchedCompanies.slice(0, itemsPerPage));
           fetchIncomes();
         })
         .catch(() => {
@@ -58,20 +57,21 @@ function App() {
               lastMonthIncome,
             });
 
-            //update progress
-            if (fetchedCompaniesWithIncomes.length % 3 === 0)
-              setProgress(
-                (
-                  (fetchedCompaniesWithIncomes.length /
-                    fetchedCompanies.length) *
-                  100
-                ).toFixed()
-              );
+            progressUpdate(
+              fetchedCompanies,
+              fetchedCompaniesWithIncomes,
+              setProgress
+            );
           })
           .catch(() => {
             setError(true);
             setIsLoading(false);
           });
+
+        //load first page
+        if (fetchedCompaniesWithIncomes.length === itemsPerPage) {
+          setAllCompanies(fetchedCompaniesWithIncomes);
+        }
       }
       setAllCompanies(fetchedCompaniesWithIncomes);
       setIsLoading(false);
